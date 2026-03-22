@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request | Samklang &amp; Ro Healthcare</title>
+  <meta name="description" content="Requests and professional inquiries | Samklang & Ro Healthcare" />
+  <style>
+    :root{
+      --bg:#f7f7f4;
+      --panel:#fcfcfa;
+      --text:#213547;
+      --sub:#607080;
+      --line:#d8dde2;
+      --accent:#7a8f89;
+      --maxw:820px;
+      --radius:16px;
+    }
+
+    *{box-sizing:border-box;}
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic","Segoe UI",sans-serif;
+      line-height:1.9;
+      letter-spacing:.02em;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .wrap{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:32px 22px 80px;
+    }
+
+    header{
+      padding:28px 0 42px;
+      border-bottom:1px solid var(--line);
+      margin-bottom:44px;
+    }
+
+    .site-title{
+      font-size:1.85rem;
+      font-weight:600;
+      letter-spacing:.04em;
+      margin:0 0 10px;
+    }
+
+    .site-sub{
+      color:var(--sub);
+      font-size:.98rem;
+      margin:0;
+    }
+
+    nav{
+      margin-top:20px;
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      font-size:.95rem;
+      color:var(--sub);
+    }
+
+    nav a:hover,
+    nav a.active{
+      color:var(--text);
+    }
+
+    section{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px 24px;
+      margin-bottom:20px;
+    }
+
+    h2{
+      margin:0 0 16px;
+      font-size:1.08rem;
+      font-weight:600;
+      letter-spacing:.05em;
+    }
+
+    p{
+      margin:0 0 14px;
+    }
+
+    .lead{
+      font-size:1.05rem;
+    }
+
+    .muted{
+      color:var(--sub);
+    }
+
+    .request-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:10px;
+    }
+
+    .request-list li{
+      padding:12px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    .request-list li:last-child{
+      border-bottom:none;
+      padding-bottom:0;
+    }
+
+    .contact-box{
+      display:grid;
+      gap:10px;
+      margin-top:8px;
+    }
+
+    footer{
+      margin-top:36px;
+      padding-top:22px;
+      border-top:1px solid var(--line);
+      color:var(--sub);
+      font-size:.9rem;
+    }
+
+    @media (max-width:640px){
+      .wrap{
+        padding:22px 16px 56px;
+      }
+
+      section{
+        padding:22px 18px;
+      }
+
+      .site-title{
+        font-size:1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1 class="site-title">Samklang &amp; Ro Healthcare</h1>
+      <p class="site-sub">
+        Dental Anesthesia / Dysphagia Rehabilitation / Orofacial Pain
+      </p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="publication.html">Publication</a>
+        <a href="request.html" class="active">Request</a>
+      </nav>
+    </header>
+
+    <section>
+      <h2>Request</h2>
+      <p class="lead">
+        Professional inquiries and collaboration requests are welcome.
+      </p>
+      <p class="muted">
+        The scope of work may include clinical collaboration, lectures, academic cooperation,
+        and related professional consultation.
+      </p>
+    </section>
+
+    <section>
+      <h2>Available Areas</h2>
+      <ul class="request-list">
+        <li>Dental anesthesia</li>
+        <li>Dysphagia rehabilitation</li>
+        <li>Orofacial pain</li>
+        <li>Lectures and educational activities</li>
+        <li>Academic and clinical collaboration</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Request Policy</h2>
+      <p>
+        Please include a brief outline of your request, institutional affiliation,
+        and preferred schedule when making an inquiry.
+      </p>
+      <p>
+        Depending on the nature of the request, a reply may take some time.
+        Thank you for your understanding.
+      </p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <div class="contact-box">
+        <div>info@samklang-ro.com</div>
+        <div><a href="#">Contact form</a></div>
+      </div>
+    </section>
+
+    <footer>
+      © Samklang &amp; Ro Healthcare
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,263 +1,212 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Samklang &amp; Ro Healthcare</title>
-<meta name="description" content="Samklang & Ro Healthcare | Dental Anesthesia, Dysphagia Rehabilitation, and Orofacial Pain" />
-<style>
-:root{
-  --bg:#f8f8f6;
-  --panel:#fcfcfa;
-  --text:#1f3550;
-  --sub:#5f6b78;
-  --line:#d8dde2;
-  --accent:#7b9088;
-  --maxw:780px;
-  --radius:14px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Yu Gothic","Hiragino Sans","Segoe UI",sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.8;
-}
-a{
-  color:var(--text);
-  text-decoration:none;
-}
-a:hover{
-  opacity:.72;
-}
-.wrap{
-  max-width:var(--maxw);
-  margin:0 auto;
-  padding:36px 22px 72px;
-}
-header{
-  padding:26px 0 18px;
-}
-.site-title{
-  font-size:clamp(2rem,4vw,3.4rem);
-  line-height:1.08;
-  font-weight:600;
-  letter-spacing:.01em;
-  margin:0 0 10px;
-}
-.site-sub{
-  margin:0;
-  color:var(--sub);
-  font-size:1.02rem;
-}
-nav{
-  margin:30px 0 42px;
-  padding:14px 0;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  display:flex;
-  flex-wrap:wrap;
-  gap:18px;
-}
-nav a{
-  font-size:.98rem;
-}
-.hero{
-  padding:24px 0 36px;
-}
-.hero h2{
-  font-size:clamp(2rem,4vw,3.2rem);
-  line-height:1.18;
-  font-weight:600;
-  letter-spacing:-.01em;
-  margin:0 0 20px;
-}
-.hero p{
-  margin:0 0 16px;
-  color:var(--sub);
-  font-size:1.05rem;
-}
-.hero-actions{
-  margin-top:28px;
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-}
-.button{
-  display:inline-block;
-  padding:11px 18px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  background:transparent;
-  font-size:.95rem;
-}
-.button.primary{
-  border-color:var(--accent);
-}
-section{
-  padding:34px 0;
-  border-top:1px solid var(--line);
-}
-.section-label{
-  font-size:.92rem;
-  color:var(--sub);
-  margin:0 0 14px;
-}
-h3{
-  margin:0 0 18px;
-  font-size:1.9rem;
-  line-height:1.3;
-  font-weight:600;
-}
-p{
-  margin:0 0 16px;
-}
-.muted{
-  color:var(--sub);
-}
-.card{
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  padding:22px 20px;
-  margin-top:18px;
-}
-.list{
-  margin:0;
-  padding-left:18px;
-}
-.list li{
-  margin:0 0 8px;
-}
-.credentials{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:16px;
-}
-footer{
-  padding-top:36px;
-  border-top:1px solid var(--line);
-  margin-top:20px;
-  color:var(--sub);
-  font-size:.95rem;
-}
-.contact-line{
-  display:flex;
-  flex-wrap:wrap;
-  gap:14px;
-}
-@media (max-width:700px){
-  .wrap{padding:24px 18px 56px}
-  .credentials{grid-template-columns:1fr}
-  nav{gap:14px}
-  .hero h2{font-size:2.2rem}
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samklang &amp; Ro Healthcare</title>
+  <meta name="description" content="Dental Anesthesia, Dysphagia Rehabilitation, and Orofacial Pain" />
+  <style>
+    :root{
+      --bg:#f7f7f4;
+      --panel:#fcfcfa;
+      --text:#213547;
+      --sub:#607080;
+      --line:#d8dde2;
+      --accent:#7a8f89;
+      --maxw:820px;
+      --radius:16px;
+    }
+
+    *{box-sizing:border-box;}
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic","Segoe UI",sans-serif;
+      line-height:1.9;
+      letter-spacing:.02em;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .wrap{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:32px 22px 80px;
+    }
+
+    header{
+      padding:28px 0 42px;
+      border-bottom:1px solid var(--line);
+      margin-bottom:44px;
+    }
+
+    .site-title{
+      font-size:1.85rem;
+      font-weight:600;
+      letter-spacing:.04em;
+      margin:0 0 10px;
+    }
+
+    .site-sub{
+      color:var(--sub);
+      font-size:.98rem;
+      margin:0;
+    }
+
+    nav{
+      margin-top:20px;
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      font-size:.95rem;
+      color:var(--sub);
+    }
+
+    nav a:hover{
+      color:var(--text);
+    }
+
+    section{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px 24px;
+      margin-bottom:20px;
+    }
+
+    h2{
+      margin:0 0 16px;
+      font-size:1.08rem;
+      font-weight:600;
+      letter-spacing:.05em;
+    }
+
+    p{
+      margin:0 0 14px;
+    }
+
+    .lead{
+      font-size:1.05rem;
+      color:var(--text);
+    }
+
+    .muted{
+      color:var(--sub);
+    }
+
+    .focus-list{
+      display:grid;
+      gap:10px;
+      padding:0;
+      margin:0;
+      list-style:none;
+    }
+
+    .focus-list li{
+      padding:12px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    .focus-list li:last-child{
+      border-bottom:none;
+      padding-bottom:0;
+    }
+
+    .contact-box{
+      display:grid;
+      gap:10px;
+      margin-top:10px;
+    }
+
+    .contact-item{
+      color:var(--text);
+    }
+
+    footer{
+      margin-top:36px;
+      padding-top:22px;
+      border-top:1px solid var(--line);
+      color:var(--sub);
+      font-size:.9rem;
+    }
+
+    @media (max-width:640px){
+      .wrap{
+        padding:22px 16px 56px;
+      }
+
+      section{
+        padding:22px 18px;
+      }
+
+      .site-title{
+        font-size:1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <h1 class="site-title">Samklang &amp; Ro Healthcare</h1>
-      <p class="site-sub">Dental Anesthesia / Dysphagia / Orofacial Pain</p>
+      <p class="site-sub">
+        Dental Anesthesia / Dysphagia Rehabilitation / Orofacial Pain
+      </p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="publication.html">Publication</a>
+        <a href="request.html">Request</a>
+      </nav>
     </header>
 
-    <nav>
-      <a href="#statement">Statement</a>
-      <a href="#professionals">For Professionals</a>
-      <a href="#insights">Insights</a>
-      <a href="#credentials">Credentials</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <section class="hero">
-      <h2>Quietly supporting clinical care through safety, judgment, and continuity.</h2>
-      <p>
-        We support clinical decision-making and patient safety through integrated expertise in
-        dental anesthesia, swallowing, and pain management.
-      </p>
-      <p>
-        Our work is grounded not only in procedural precision, but also in the broader responsibility
-        to provide care that is safe, sustainable, and appropriate for each individual patient.
-      </p>
-      <div class="hero-actions">
-        <a class="button primary" href="#contact">Request</a>
-        <a class="button" href="#insights">Read Insights</a>
-      </div>
-    </section>
-
-    <section id="statement">
-      <p class="section-label">Statement</p>
-      <h3>Supporting care with calm structure and clinical realism.</h3>
-      <p>
-        We aim to support healthcare quietly through the clinical fields of dental anesthesia,
+    <section>
+      <h2>Statement</h2>
+      <p class="lead">
+        Providing calm, clinically grounded support in dental anesthesia,
         dysphagia rehabilitation, and orofacial pain.
       </p>
-      <p>
-        Rather than approaching these domains as separate specialties, we believe they should be
-        understood as interconnected aspects of patient care, linked by systemic management,
-        careful evaluation, and realistic clinical judgment.
-      </p>
       <p class="muted">
-        This site is intended as a concise professional introduction rather than a comprehensive portal.
+        This site is intended as a concise professional profile and point of contact.
+        Further pages will be added as the project develops.
       </p>
     </section>
 
-    <section id="professionals">
-      <p class="section-label">For Professionals</p>
-      <h3>Clinical support for institutions and colleagues.</h3>
-      <div class="card">
-        <ul class="list">
-          <li>Dental anesthesia support</li>
-          <li>Dysphagia-related clinical collaboration</li>
-          <li>Orofacial pain perspective in interdisciplinary care</li>
-          <li>Consultation and professional communication</li>
-        </ul>
-      </div>
+    <section>
+      <h2>Clinical Focus</h2>
+      <ul class="focus-list">
+        <li>Dental anesthesia</li>
+        <li>Dysphagia rehabilitation</li>
+        <li>Orofacial pain</li>
+      </ul>
     </section>
 
-    <section id="insights">
-      <p class="section-label">Insights</p>
-      <h3>A place for selected writing and perspective.</h3>
+    <section>
+      <h2>About</h2>
       <p>
-        Essays, short notes, and reflections related to patient safety, dental anesthesia,
-        dysphagia, and orofacial pain will be published here gradually.
+        Clinical practice, collaboration, and academic activity are approached
+        with an emphasis on steadiness, clarity, and practical usefulness.
       </p>
-      <div class="card">
-        <p class="muted">Selected pages can be added here later as individual HTML files.</p>
-      </div>
+      <p>
+        The aim of this website is not to be expansive, but to present essential
+        information in a quiet and accessible form.
+      </p>
     </section>
 
-    <section id="credentials">
-      <p class="section-label">Credentials</p>
-      <h3>Professional background.</h3>
-      <div class="credentials">
-        <div class="card">
-          <p><strong>Name</strong><br> Motoaki Inagawa</p>
-          <p><strong>Field</strong><br> Dental Anesthesia / Dysphagia / Orofacial Pain</p>
-        </div>
-        <div class="card">
-          <p><strong>Practice Style</strong><br> Independent, collaborative, clinically focused</p>
-          <p><strong>Base</strong><br> Japan</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <p class="section-label">Contact</p>
-      <h3>Contact</h3>
-      <div class="card">
-        <div class="contact-line">
-          <span>info@samklang-ro.com</span>
-          <span>・</span>
-          <span>Contact form</span>
-        </div>
+    <section>
+      <h2>Contact</h2>
+      <div class="contact-box">
+        <div class="contact-item">info@samklang-ro.com</div>
+        <div class="contact-item"><a href="#">Contact form</a></div>
       </div>
     </section>
 
     <footer>
-      <p>Samklang &amp; Ro Healthcare</p>
+      © Samklang &amp; Ro Healthcare
     </footer>
   </div>
 </body>

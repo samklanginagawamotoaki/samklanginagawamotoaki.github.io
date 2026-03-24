@@ -1,210 +1,311 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Request | Samklang &amp; Ro Healthcare</title>
-  <meta name="description" content="Requests and professional inquiries | Samklang & Ro Healthcare" />
-  <style>
-    :root{
-      --bg:#f7f7f4;
-      --panel:#fcfcfa;
-      --text:#213547;
-      --sub:#607080;
-      --line:#d8dde2;
-      --accent:#7a8f89;
-      --maxw:820px;
-      --radius:16px;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Form | Samklang &amp; Ro Healthcare</title>
+<meta name="description" content="Contact Form | Samklang & Ro Healthcare" />
 
-    *{box-sizing:border-box;}
+<style>
+:root{
+  --bg:#f7f7f4;
+  --panel:#fbfbf8;
+  --text:#1f3550;
+  --sub:#62707d;
+  --line:#dde2e6;
+  --line-soft:#e8ecef;
+  --accent:#7b9088;
+  --maxw:860px;
+  --radius:16px;
+  --shadow:0 8px 24px rgba(31,53,80,0.04);
+}
 
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic","Segoe UI",sans-serif;
-      line-height:1.9;
-      letter-spacing:.02em;
-    }
+*{box-sizing:border-box;}
 
-    a{
-      color:inherit;
-      text-decoration:none;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    .wrap{
-      max-width:var(--maxw);
-      margin:0 auto;
-      padding:32px 22px 80px;
-    }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Hiragino Sans","Yu Gothic",Arial,sans-serif;
+  line-height:1.9;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
 
-    header{
-      padding:28px 0 42px;
-      border-bottom:1px solid var(--line);
-      margin-bottom:44px;
-    }
+main{
+  display:block;
+}
 
-    .site-title{
-      font-size:1.85rem;
-      font-weight:600;
-      letter-spacing:.04em;
-      margin:0 0 10px;
-    }
+.wrap{
+  width:min(var(--maxw),calc(100% - 32px));
+  margin:0 auto;
+  padding:56px 0 88px;
+}
 
-    .site-sub{
-      color:var(--sub);
-      font-size:.98rem;
-      margin:0;
-    }
+header{
+  padding:12px 0 44px;
+  border-bottom:1px solid var(--line);
+}
 
-    nav{
-      margin-top:20px;
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-      font-size:.95rem;
-      color:var(--sub);
-    }
+.logo{
+  margin:0 0 22px;
+}
 
-    nav a:hover,
-    nav a.active{
-      color:var(--text);
-    }
+.logo img{
+  display:block;
+  max-width:220px;
+  width:auto;
+  height:auto;
+}
 
-    section{
-      background:var(--panel);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:28px 24px;
-      margin-bottom:20px;
-    }
+h1{
+  margin:0;
+  font-size:clamp(2rem, 4.2vw, 2.95rem);
+  line-height:1.2;
+  font-weight:500;
+  letter-spacing:0.01em;
+}
 
-    h2{
-      margin:0 0 16px;
-      font-size:1.08rem;
-      font-weight:600;
-      letter-spacing:.05em;
-    }
+.lead{
+  margin:18px 0 0;
+  color:var(--sub);
+  font-size:1.02rem;
+  max-width:38rem;
+}
 
-    p{
-      margin:0 0 14px;
-    }
+.section{
+  padding:38px 0 40px;
+  border-bottom:1px solid var(--line);
+}
 
-    .lead{
-      font-size:1.05rem;
-    }
+.section-inner{
+  max-width:760px;
+}
 
-    .muted{
-      color:var(--sub);
-    }
+h2{
+  margin:0 0 20px;
+  font-size:0.82rem;
+  font-weight:600;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--accent);
+}
 
-    .request-list{
-      list-style:none;
-      padding:0;
-      margin:0;
-      display:grid;
-      gap:10px;
-    }
+p{
+  margin:0 0 12px;
+}
 
-    .request-list li{
-      padding:12px 0;
-      border-bottom:1px solid var(--line);
-    }
+.jp{
+  margin-top:-2px;
+  margin-bottom:18px;
+  color:var(--sub);
+  font-size:0.95rem;
+}
 
-    .request-list li:last-child{
-      border-bottom:none;
-      padding-bottom:0;
-    }
+.form-shell{
+  margin-top:12px;
+  padding:24px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:var(--panel);
+  box-shadow:var(--shadow);
+}
 
-    .contact-box{
-      display:grid;
-      gap:10px;
-      margin-top:8px;
-    }
+.form-grid{
+  display:grid;
+  gap:18px;
+}
 
-    footer{
-      margin-top:36px;
-      padding-top:22px;
-      border-top:1px solid var(--line);
-      color:var(--sub);
-      font-size:.9rem;
-    }
+label{
+  display:block;
+  margin-bottom:8px;
+  font-size:0.94rem;
+  color:var(--text);
+}
 
-    @media (max-width:640px){
-      .wrap{
-        padding:22px 16px 56px;
-      }
+input,
+textarea{
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:14px 15px;
+  font:inherit;
+  color:var(--text);
+  background:#fff;
+  outline:none;
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
 
-      section{
-        padding:22px 18px;
-      }
+input:focus,
+textarea:focus{
+  border-color:rgba(123,144,136,0.85);
+  box-shadow:0 0 0 3px rgba(123,144,136,0.08);
+}
 
-      .site-title{
-        font-size:1.5rem;
-      }
-    }
-  </style>
+textarea{
+  min-height:180px;
+  resize:vertical;
+}
+
+.button-row{
+  padding-top:6px;
+}
+
+button{
+  appearance:none;
+  border:none;
+  border-radius:999px;
+  padding:12px 24px;
+  font:inherit;
+  color:#fff;
+  background:var(--text);
+  cursor:pointer;
+  transition:opacity .2s ease, transform .2s ease;
+}
+
+button:hover{
+  opacity:0.92;
+}
+
+button:active{
+  transform:translateY(1px);
+}
+
+.note{
+  margin-top:16px;
+  color:var(--sub);
+  font-size:0.92rem;
+}
+
+.contact-line{
+  margin-top:12px;
+}
+
+.back-link{
+  display:inline-block;
+  margin-top:8px;
+}
+
+a{
+  color:var(--text);
+  text-decoration:none;
+  border-bottom:1px solid rgba(31,53,80,0.28);
+  transition:border-color .2s ease, opacity .2s ease;
+}
+
+a:hover{
+  border-bottom-color:rgba(31,53,80,0.55);
+  opacity:0.9;
+}
+
+footer{
+  padding-top:28px;
+  color:var(--sub);
+  font-size:0.88rem;
+}
+
+@media (min-width: 760px){
+  .wrap{
+    width:min(var(--maxw),calc(100% - 56px));
+    padding-top:72px;
+  }
+}
+
+@media (max-width: 640px){
+  .wrap{
+    width:min(var(--maxw),calc(100% - 24px));
+    padding-top:38px;
+    padding-bottom:56px;
+  }
+
+  header{
+    padding-bottom:34px;
+  }
+
+  .section{
+    padding:30px 0 32px;
+  }
+
+  .form-shell{
+    padding:18px;
+  }
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <header>
-      <h1 class="site-title">Samklang &amp; Ro Healthcare</h1>
-      <p class="site-sub">
-        Dental Anesthesia / Dysphagia Rehabilitation / Orofacial Pain
-      </p>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="publication.html">Publication</a>
-        <a href="request.html" class="active">Request</a>
-      </nav>
-    </header>
+<main class="wrap">
 
-    <section>
-      <h2>Request</h2>
-      <p class="lead">
-        Professional inquiries and collaboration requests are welcome.
-      </p>
-      <p class="muted">
-        The scope of work may include clinical collaboration, lectures, academic cooperation,
-        and related professional consultation.
-      </p>
-    </section>
+<header>
+  <p class="logo"><img src="logo.png" alt="Samklang &amp; Ro Healthcare logo"></p>
+  <h1>Contact Form</h1>
+  <p class="lead">
+    For clinical requests, professional collaboration, lectures, and related inquiries.
+  </p>
+</header>
 
-    <section>
-      <h2>Available Areas</h2>
-      <ul class="request-list">
-        <li>Dental anesthesia</li>
-        <li>Dysphagia rehabilitation</li>
-        <li>Orofacial pain</li>
-        <li>Lectures and educational activities</li>
-        <li>Academic and clinical collaboration</li>
-      </ul>
-    </section>
+<section class="section">
+  <div class="section-inner">
+    <h2>Contact</h2>
+    <p>
+      Please use the form below for clinical requests, professional collaboration, lectures, and related inquiries.
+    </p>
+    <p class="jp">
+      診療支援、専門的協働、講演、その他のお問い合わせは、以下のフォームよりご連絡ください。
+    </p>
 
-    <section>
-      <h2>Request Policy</h2>
-      <p>
-        Please include a brief outline of your request, institutional affiliation,
-        and preferred schedule when making an inquiry.
-      </p>
-      <p>
-        Depending on the nature of the request, a reply may take some time.
-        Thank you for your understanding.
-      </p>
-    </section>
+    <div class="form-shell">
+      <form action="#" method="post">
+        <div class="form-grid">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" />
+          </div>
 
-    <section>
-      <h2>Contact</h2>
-      <div class="contact-box">
-        <div>info@samklang-ro.com</div>
-        <div><a href="#">Contact form</a></div>
-      </div>
-    </section>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+          </div>
 
-    <footer>
-      © Samklang &amp; Ro Healthcare
-    </footer>
+          <div>
+            <label for="organization">Organization</label>
+            <input type="text" id="organization" name="organization" />
+          </div>
+
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+
+          <div class="button-row">
+            <button type="submit">Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <p class="note">
+      You may also contact us directly by email.
+    </p>
+
+    <p class="contact-line">
+      <a href="mailto:info@samklang-ro.com">info@samklang-ro.com</a>
+    </p>
+
+    <p class="back-link">
+      <a href="index.html">Back to Home</a>
+    </p>
   </div>
+</section>
+
+<footer>
+  © Samklang &amp; Ro Healthcare
+</footer>
+
+</main>
 </body>
 </html>

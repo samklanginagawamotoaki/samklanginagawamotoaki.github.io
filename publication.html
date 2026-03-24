@@ -1,238 +1,281 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Publication | Samklang &amp; Ro Healthcare</title>
-  <meta name="description" content="Publications and academic activities | Samklang & Ro Healthcare" />
-  <style>
-    :root{
-      --bg:#f7f7f4;
-      --panel:#fcfcfa;
-      --text:#213547;
-      --sub:#607080;
-      --line:#d8dde2;
-      --accent:#7a8f89;
-      --maxw:820px;
-      --radius:16px;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Professional Profile | Samklang &amp; Ro Healthcare</title>
+<meta name="description" content="Professional Profile | Samklang & Ro Healthcare" />
 
-    *{box-sizing:border-box;}
+<style>
+:root{
+  --bg:#f7f7f4;
+  --panel:#fbfbf8;
+  --text:#1f3550;
+  --sub:#62707d;
+  --line:#dde2e6;
+  --line-soft:#e8ecef;
+  --accent:#7b9088;
+  --maxw:860px;
+  --radius:16px;
+  --shadow:0 8px 24px rgba(31,53,80,0.04);
+}
 
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic","Segoe UI",sans-serif;
-      line-height:1.9;
-      letter-spacing:.02em;
-    }
+*{box-sizing:border-box;}
 
-    a{
-      color:inherit;
-      text-decoration:none;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    .wrap{
-      max-width:var(--maxw);
-      margin:0 auto;
-      padding:32px 22px 80px;
-    }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Hiragino Sans","Yu Gothic",Arial,sans-serif;
+  line-height:1.9;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
 
-    header{
-      padding:28px 0 42px;
-      border-bottom:1px solid var(--line);
-      margin-bottom:44px;
-    }
+main{
+  display:block;
+}
 
-    .site-title{
-      font-size:1.85rem;
-      font-weight:600;
-      letter-spacing:.04em;
-      margin:0 0 10px;
-    }
+.wrap{
+  width:min(var(--maxw),calc(100% - 32px));
+  margin:0 auto;
+  padding:56px 0 88px;
+}
 
-    .site-sub{
-      color:var(--sub);
-      font-size:.98rem;
-      margin:0;
-    }
+header{
+  padding:12px 0 44px;
+  border-bottom:1px solid var(--line);
+}
 
-    nav{
-      margin-top:20px;
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-      font-size:.95rem;
-      color:var(--sub);
-    }
+.logo{
+  margin:0 0 22px;
+}
 
-    nav a:hover,
-    nav a.active{
-      color:var(--text);
-    }
+.logo img{
+  display:block;
+  max-width:220px;
+  width:auto;
+  height:auto;
+}
 
-    section{
-      background:var(--panel);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:28px 24px;
-      margin-bottom:20px;
-    }
+h1{
+  margin:0;
+  font-size:clamp(2rem, 4.2vw, 2.95rem);
+  line-height:1.2;
+  font-weight:500;
+  letter-spacing:0.01em;
+}
 
-    h2{
-      margin:0 0 16px;
-      font-size:1.08rem;
-      font-weight:600;
-      letter-spacing:.05em;
-    }
+.lead{
+  margin:18px 0 0;
+  color:var(--sub);
+  font-size:1.02rem;
+  max-width:38rem;
+}
 
-    h3{
-      margin:0 0 10px;
-      font-size:1rem;
-      font-weight:600;
-      color:var(--text);
-    }
+.section{
+  padding:38px 0 40px;
+  border-bottom:1px solid var(--line);
+}
 
-    p{
-      margin:0 0 14px;
-    }
+.section-inner{
+  max-width:760px;
+}
 
-    .lead{
-      font-size:1.05rem;
-    }
+h2{
+  margin:0 0 20px;
+  font-size:0.82rem;
+  font-weight:600;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--accent);
+}
 
-    .muted{
-      color:var(--sub);
-    }
+p{
+  margin:0 0 12px;
+}
 
-    .pub-list{
-      list-style:none;
-      padding:0;
-      margin:0;
-      display:grid;
-      gap:18px;
-    }
+.jp{
+  margin-top:-2px;
+  margin-bottom:18px;
+  color:var(--sub);
+  font-size:0.95rem;
+}
 
-    .pub-item{
-      padding-bottom:18px;
-      border-bottom:1px solid var(--line);
-    }
+.profile-block{
+  margin-top:26px;
+  padding-top:22px;
+  border-top:1px solid var(--line-soft);
+}
 
-    .pub-item:last-child{
-      border-bottom:none;
-      padding-bottom:0;
-    }
+.profile-block:first-of-type{
+  margin-top:12px;
+  padding-top:0;
+  border-top:none;
+}
 
-    .pub-meta{
-      color:var(--sub);
-      font-size:.94rem;
-      margin-top:4px;
-    }
+.block-title{
+  margin:0 0 8px;
+  font-size:1.02rem;
+  font-weight:600;
+  line-height:1.6;
+}
 
-    footer{
-      margin-top:36px;
-      padding-top:22px;
-      border-top:1px solid var(--line);
-      color:var(--sub);
-      font-size:.9rem;
-    }
+.block-sub{
+  margin:0 0 12px;
+  color:var(--sub);
+  font-size:0.94rem;
+}
 
-    @media (max-width:640px){
-      .wrap{
-        padding:22px 16px 56px;
-      }
+.list{
+  margin:0;
+  padding-left:1.2em;
+}
 
-      section{
-        padding:22px 18px;
-      }
+.list li{
+  margin:7px 0;
+}
 
-      .site-title{
-        font-size:1.5rem;
-      }
-    }
-  </style>
+.note{
+  margin-top:18px;
+  color:var(--sub);
+  font-size:0.92rem;
+}
+
+.back-link{
+  display:inline-block;
+  margin-top:8px;
+}
+
+a{
+  color:var(--text);
+  text-decoration:none;
+  border-bottom:1px solid rgba(31,53,80,0.28);
+  transition:border-color .2s ease, opacity .2s ease;
+}
+
+a:hover{
+  border-bottom-color:rgba(31,53,80,0.55);
+  opacity:0.9;
+}
+
+footer{
+  padding-top:28px;
+  color:var(--sub);
+  font-size:0.88rem;
+}
+
+@media (min-width: 760px){
+  .wrap{
+    width:min(var(--maxw),calc(100% - 56px));
+    padding-top:72px;
+  }
+}
+
+@media (max-width: 640px){
+  .wrap{
+    width:min(var(--maxw),calc(100% - 24px));
+    padding-top:38px;
+    padding-bottom:56px;
+  }
+
+  header{
+    padding-bottom:34px;
+  }
+
+  .section{
+    padding:30px 0 32px;
+  }
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <header>
-      <h1 class="site-title">Samklang &amp; Ro Healthcare</h1>
-      <p class="site-sub">
-        Dental Anesthesia / Dysphagia Rehabilitation / Orofacial Pain
-      </p>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="publication.html" class="active">Publication</a>
-        <a href="request.html">Request</a>
-      </nav>
-    </header>
+<main class="wrap">
 
-    <section>
-      <h2>Publication</h2>
-      <p class="lead">
-        Publications, presentations, and academic activities will be listed here.
-      </p>
-      <p class="muted">
-        A selected list is shown below. This page may be updated gradually.
-      </p>
-    </section>
+<header>
+  <p class="logo"><img src="logo.png" alt="Samklang &amp; Ro Healthcare logo"></p>
+  <h1>Professional Profile</h1>
+  <p class="lead">
+    Professional qualifications, academic presentations, and publications.
+  </p>
+</header>
 
-    <section>
-      <h2>Selected Publications</h2>
-      <ul class="pub-list">
-        <li class="pub-item">
-          <h3>Title of publication</h3>
-          <p class="pub-meta">Journal name / Year / Authors</p>
-          <p class="muted">A short description or note can be placed here if needed.</p>
-        </li>
-        <li class="pub-item">
-          <h3>Title of publication</h3>
-          <p class="pub-meta">Journal name / Year / Authors</p>
-          <p class="muted">A short description or note can be placed here if needed.</p>
-        </li>
-        <li class="pub-item">
-          <h3>Title of publication</h3>
-          <p class="pub-meta">Journal name / Year / Authors</p>
-          <p class="muted">A short description or note can be placed here if needed.</p>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Presentations</h2>
-      <ul class="pub-list">
-        <li class="pub-item">
-          <h3>Title of presentation</h3>
-          <p class="pub-meta">Meeting / Congress name / Year</p>
-        </li>
-        <li class="pub-item">
-          <h3>Title of presentation</h3>
-          <p class="pub-meta">Meeting / Congress name / Year</p>
-        </li>
-        <li class="pub-item">
-          <h3>Title of presentation</h3>
-          <p class="pub-meta">Meeting / Congress name / Year</p>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Lectures / Academic Activities</h2>
-      <ul class="pub-list">
-        <li class="pub-item">
-          <h3>Lecture title or activity</h3>
-          <p class="pub-meta">Institution / Event / Year</p>
-        </li>
-        <li class="pub-item">
-          <h3>Lecture title or activity</h3>
-          <p class="pub-meta">Institution / Event / Year</p>
-        </li>
-      </ul>
-    </section>
-
-    <footer>
-      © Samklang &amp; Ro Healthcare
-    </footer>
+<section class="section">
+  <div class="section-inner">
+    <h2>Overview</h2>
+    <p>
+      This page presents professional qualifications, academic presentations, and publications as part of an integrated clinical and academic profile.
+    </p>
+    <p class="jp">
+      このページでは、専門資格、学会発表、論文を、臨床と学術の両面から整理して掲載しています。
+    </p>
   </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <h2>Certifications</h2>
+
+    <div class="profile-block">
+      <p class="block-title">Professional Qualifications</p>
+      <p class="block-sub">専門資格</p>
+      <ul class="list">
+        <li>Board Certified Specialist Dental Anesthesiology (JDSA)</li>
+        <li>DDS, PhD</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <h2>Academic Presentations</h2>
+
+    <div class="profile-block">
+      <p class="block-title">Presentations and Academic Record</p>
+      <p class="block-sub">学会発表・学術業績</p>
+      <ul class="list">
+        <li>Please add your academic presentations here.</li>
+        <li>Example: Title / Meeting name / Year</li>
+        <li>Example: Title / Society / Venue / Date</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <h2>Publications</h2>
+
+    <div class="profile-block">
+      <p class="block-title">Publication List</p>
+      <p class="block-sub">論文</p>
+      <ul class="list">
+        <li>Please add your publications here.</li>
+        <li>Example: Author(s), Title, Journal, Year</li>
+        <li>Example: Author(s), Title, Volume(Issue): Pages, Year</li>
+      </ul>
+    </div>
+
+    <p class="note">
+      Detailed records can be updated here as needed.
+    </p>
+
+    <p class="back-link">
+      <a href="index.html">Back to Home</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  © Samklang &amp; Ro Healthcare
+</footer>
+
+</main>
 </body>
 </html>

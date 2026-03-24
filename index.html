@@ -8,34 +8,39 @@
 
 <style>
 :root{
-  --bg:#f8f8f6;
-  --panel:#fcfcfa;
+  --bg:#f7f7f4;
+  --panel:#fbfbf8;
   --text:#1f3550;
-  --sub:#5f6b78;
-  --line:#d8dde2;
+  --sub:#62707d;
+  --line:#dde2e6;
+  --line-soft:#e8ecef;
   --accent:#7b9088;
-  --maxw:780px;
-  --radius:14px;
+  --maxw:860px;
+  --radius:16px;
+  --shadow:0 8px 24px rgba(31,53,80,0.04);
 }
 
 *{box-sizing:border-box;}
+
+html{scroll-behavior:smooth;}
 
 body{
   margin:0;
   background:var(--bg);
   color:var(--text);
   font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Hiragino Sans","Yu Gothic",Arial,sans-serif;
-  line-height:1.8;
+  line-height:1.9;
+  -webkit-font-smoothing:antialiased;
 }
 
 .wrap{
-  width:min(var(--maxw),calc(100% - 40px));
+  width:min(var(--maxw),calc(100% - 32px));
   margin:0 auto;
-  padding:56px 0 72px;
+  padding:56px 0 88px;
 }
 
 header{
-  padding-bottom:30px;
+  padding:12px 0 44px;
   border-bottom:1px solid var(--line);
 }
 
@@ -45,7 +50,7 @@ header{
 
 h1{
   margin:0;
-  font-size:2.6rem;
+  font-size:clamp(2rem, 4.2vw, 2.95rem);
   font-weight:500;
 }
 
@@ -55,133 +60,74 @@ h1{
 }
 
 .signature{
-  margin-top:20px;
+  margin-top:18px;
   color:var(--accent);
 }
 
 section{
-  padding:32px 0;
+  padding:38px 0;
   border-bottom:1px solid var(--line);
 }
 
 h2{
-  font-size:0.9rem;
-  letter-spacing:0.16em;
+  font-size:0.8rem;
+  letter-spacing:0.18em;
   text-transform:uppercase;
   color:var(--accent);
-  margin-bottom:16px;
+  margin-bottom:18px;
 }
 
-h3{
-  margin:24px 0 8px;
-  font-size:1rem;
-  font-weight:500;
-  color:var(--text);
-}
+p{margin:0 0 12px;}
 
 .jp{
   color:var(--sub);
   font-size:0.95rem;
-  margin-top:4px;
 }
 
 .signature-block{
-  margin-top:24px;
-  line-height:1.6;
-}
-
-.signature-en{
-  font-size:0.95rem;
-}
-
-.signature-jp{
-  margin-top:6px;
-  color:var(--sub);
-  font-size:0.9rem;
-}
-
-.list{
-  display:grid;
-  gap:14px;
-}
-
-.card{
-  padding:14px;
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  background:var(--panel);
-}
-
-.item-title{
-  font-weight:500;
-}
-
-.item-sub{
-  color:var(--sub);
-  font-size:0.95rem;
+  margin-top:28px;
+  padding-top:18px;
+  border-top:1px solid var(--line-soft);
+  text-align:right;
 }
 
 .calendar-shell{
-  margin-top:10px;
   border:1px solid var(--line);
-  border-radius:var(--radius);
+  border-radius:16px;
   overflow:hidden;
-}
-
-.calendar-toolbar{
-  padding:14px;
-  text-align:center;
-  border-bottom:1px solid var(--line);
-}
-
-.calendar-crop{
-  height:760px;
-  overflow:hidden;
+  background:#fff;
 }
 
 .calendar-frame{
   width:100%;
-  height:808px;
+  height:800px;
   border:0;
-  margin-bottom:-48px;
 }
 
-.calendar-note{
-  margin-top:12px;
-  font-size:0.9rem;
-  color:var(--sub);
-}
-
-.profile-group{
+.list{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
   margin-top:20px;
 }
 
-.profile-list{
-  margin:8px 0 0;
-  padding-left:1.2em;
-  color:var(--text);
-}
-
-.profile-list li{
-  margin:6px 0;
-}
-
-.profile-note{
-  margin-top:14px;
-  color:var(--sub);
-  font-size:0.92rem;
+.card{
+  padding:16px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--panel);
 }
 
 a{
   color:var(--text);
   text-decoration:none;
-  border-bottom:1px solid rgba(31,53,80,0.3);
+  border-bottom:1px solid rgba(31,53,80,0.4);
 }
 
 footer{
-  padding-top:26px;
-  font-size:0.88rem;
+  padding-top:28px;
   color:var(--sub);
+  font-size:0.88rem;
 }
 </style>
 </head>
@@ -190,98 +136,57 @@ footer{
 <main class="wrap">
 
 <header>
-<p class="logo"><img src="logo.png" alt="Samklang &amp; Ro Healthcare logo"></p>
-<h1>Samklang &amp; Ro Healthcare</h1>
-<p class="lead">
-Clinical practice in dental anesthesia,<br>
-dysphagia rehabilitation, and orofacial pain.
-</p>
-<p class="signature">Quiet expertise for thoughtful clinical care.</p>
+  <p class="logo"><img src="logo.png" alt="logo"></p>
+  <h1>Samklang &amp; Ro Healthcare</h1>
+  <p class="lead">
+    Clinical practice in dental anesthesia,<br>
+    dysphagia rehabilitation, and orofacial pain.
+  </p>
+  <p class="signature">Quiet expertise for thoughtful clinical care.</p>
 </header>
 
 <section>
 <h2>Statement</h2>
 
-<p>
-We provide thoughtful clinical support to ensure safe, comfortable, and reliable dental care.
-</p>
-<p class="jp">
-安全で快適かつ信頼できる歯科医療を実現するため、丁寧な臨床支援を提供します。
-</p>
+<p>We provide thoughtful clinical support to ensure safe, comfortable, and reliable dental care.</p>
+<p class="jp">安全で快適かつ信頼できる歯科医療を実現するため、丁寧な臨床支援を提供します。</p>
 
-<p>
-Our approach integrates dental anesthesia, dysphagia rehabilitation, and orofacial pain management.
-</p>
-<p class="jp">
-歯科麻酔・摂食嚥下リハビリテーション・口腔顔面痛診療を統合したアプローチを行います。
-</p>
+<p>Our approach integrates dental anesthesia, dysphagia rehabilitation, and orofacial pain management.</p>
+<p class="jp">歯科麻酔・摂食嚥下リハビリテーション・口腔顔面痛診療を統合したアプローチを行います。</p>
 
-<p>
-We support patients with complex needs and medical conditions through careful preparation and calm clinical judgment.
-</p>
-<p class="jp">
-全身状態や背景の複雑な患者にも対応できるよう、入念な準備と落ち着いた臨床判断を重視しています。
-</p>
+<p>We support patients with complex needs and medical conditions through careful preparation and calm clinical judgment.</p>
+<p class="jp">全身状態や背景の複雑な患者にも対応できるよう、入念な準備と落ち着いた臨床判断を重視しています。</p>
 
-<div class="signature-block" style="text-align:right;">
-  <div class="signature-en">
-    Motoaki Inagawa, DDS, PhD.<br>
-    Board Certified Specialist Dental Anesthesiology (JDSA)
-  </div>
-  <div class="signature-jp">
-    稲川元明<br>
-    歯学博士<br>
-    日本歯科麻酔学会専門医
-  </div>
+<div class="signature-block">
+Motoaki Inagawa, DDS, PhD.<br>
+Board Certified Specialist Dental Anesthesiology (JDSA)<br><br>
+稲川元明<br>
+歯学博士<br>
+日本歯科麻酔学会専門医
 </div>
-
 </section>
 
 <section>
 <h2>Schedule</h2>
 <div class="calendar-shell">
-<div class="calendar-toolbar">Schedule</div>
-<div class="calendar-crop">
 <iframe class="calendar-frame"
-src="https://calendar.google.com/calendar/embed?src=95666e31c98ab50df94b065bc9e701ccce022973d3631561ecb4350c4a4fba6e%40group.calendar.google.com&ctz=Asia%2FTokyo&mode=MONTH&showTabs=1&showTitle=0&showCalendars=0">
+src="https://calendar.google.com/calendar/embed?src=95666e31c98ab50df94b065bc9e701ccce022973d3631561ecb4350c4a4fba6e%40group.calendar.google.com&ctz=Asia%2FTokyo">
 </iframe>
 </div>
-</div>
-<p class="calendar-note">
-Default view is monthly. You can switch views within the calendar.
-</p>
 </section>
 
 <section>
 <h2>For Professionals</h2>
 
-<p>
-We offer clinical support for dental clinics and medical institutions requiring advanced patient management.
-</p>
-<p class="jp">
-高度な患者管理を必要とする歯科医院・医療機関に対して臨床支援を行います。
-</p>
-
-<p>
-Our services include dental anesthesia, perioperative management, and consultation in dysphagia and orofacial pain.
-</p>
-<p class="jp">
-歯科麻酔、周術期管理、嚥下および口腔顔面痛に関する専門的コンサルテーションを提供します。
-</p>
+<p>We offer clinical support for dental clinics and medical institutions requiring advanced patient management.</p>
+<p class="jp">高度な患者管理を必要とする歯科医院・医療機関に対して臨床支援を行います。</p>
 
 <div class="list">
-<div class="card"><div class="item-title">Dental Anesthesia Support</div><div class="item-sub">出張麻酔・静脈内鎮静</div></div>
-<div class="card"><div class="item-title">Perioperative Management</div><div class="item-sub">周術期管理・全身管理</div></div>
-<div class="card"><div class="item-title">Dysphagia &amp; Pain Consultation</div><div class="item-sub">嚥下・口腔顔面痛の専門相談</div></div>
-<div class="card"><div class="item-title">Lectures &amp; Education</div><div class="item-sub">講演・研修</div></div>
+<div class="card">Dental Anesthesia Support / 出張麻酔・静脈内鎮静</div>
+<div class="card">Perioperative Management / 周術期管理</div>
+<div class="card">Dysphagia &amp; Pain Consultation / 嚥下・口腔顔面痛</div>
+<div class="card">Lectures &amp; Education / 講演・研修</div>
 </div>
-
-<p style="margin-top:16px;">
-We accept clinical requests and professional collaborations.
-</p>
-<p class="jp">
-診療支援および専門的な協働のご相談を承っております。
-</p>
 
 </section>
 
@@ -289,50 +194,22 @@ We accept clinical requests and professional collaborations.
 <h2>Professional Profile</h2>
 
 <p>
-Professional qualifications, academic presentations, and publications are organized here as part of an integrated clinical and academic profile.
+<a href="publication.html">Professional qualifications, academic presentations, and publications</a>
+are organized here as part of an integrated clinical and academic profile.
 </p>
+
 <p class="jp">
-専門資格、学会発表、論文を、臨床と学術の両面から整理して掲載しています。
+<a href="publication.html">専門資格、学会発表、論文</a>
+を、臨床と学術の両面から整理して掲載しています。
 </p>
 
-<div class="profile-group">
-  <h3>Certifications</h3>
-  <p class="jp">専門資格</p>
-  <ul class="profile-list">
-    <li>Board Certified Specialist Dental Anesthesiology (JDSA)</li>
-    <li>DDS, PhD</li>
-  </ul>
-</div>
-
-<div class="profile-group">
-  <h3>Academic Presentations</h3>
-  <p class="jp">学会発表</p>
-  <ul class="profile-list">
-    <li><a href="publication.html">View presentations and academic record</a></li>
-  </ul>
-</div>
-
-<div class="profile-group">
-  <h3>Publications</h3>
-  <p class="jp">論文</p>
-  <ul class="profile-list">
-    <li><a href="publication.html">View publication list</a></li>
-  </ul>
-</div>
-
-<p class="profile-note">
-A dedicated page is available for detailed records.
-</p>
 </section>
 
 <section>
 <h2>Contact</h2>
 
 <p><a href="mailto:info@samklang-ro.com">info@samklang-ro.com</a></p>
-
-<p style="margin-top:16px;">
-<a href="request.html">Contact form</a>
-</p>
+<p><a href="request.html">Contact form</a></p>
 
 </section>
 

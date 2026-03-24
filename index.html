@@ -4,18 +4,18 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Samklang &amp; Ro Healthcare</title>
-<meta name="description" content="Dental Anesthesia, Dysphagia Rehabilitation, and Orofacial Pain" />
+<meta name="description" content="Samklang & Ro Healthcare | Dental Anesthesia, Dysphagia Rehabilitation, and Orofacial Pain" />
 
 <style>
 :root{
-  --bg:#f7f7f4;
+  --bg:#f8f8f6;
   --panel:#fcfcfa;
-  --text:#213547;
-  --sub:#607080;
+  --text:#1f3550;
+  --sub:#5f6b78;
   --line:#d8dde2;
-  --accent:#7a8f89;
-  --maxw:820px;
-  --radius:16px;
+  --accent:#7b9088;
+  --maxw:780px;
+  --radius:14px;
 }
 
 *{box-sizing:border-box;}
@@ -24,233 +24,322 @@ body{
   margin:0;
   background:var(--bg);
   color:var(--text);
-  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic","Segoe UI",sans-serif;
-  line-height:1.9;
-  letter-spacing:.02em;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
+  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Hiragino Sans","Yu Gothic",Arial,sans-serif;
+  line-height:1.8;
 }
 
 .wrap{
-  max-width:var(--maxw);
+  width:min(var(--maxw),calc(100% - 40px));
   margin:0 auto;
-  padding:32px 22px 80px;
+  padding:56px 0 72px;
 }
-
-/* ===== HEADER ===== */
 
 header{
-  padding:28px 0 42px;
+  padding-bottom:30px;
   border-bottom:1px solid var(--line);
-  margin-bottom:44px;
 }
 
-/* ロゴ＋タイトル一体 */
-.brand{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  margin-bottom:8px;
+.logo img{
+  max-width:220px;
 }
 
-/* ミニマルロゴ（SVG） */
-.logo{
-  width:42px;
-  height:42px;
-}
-
-/* タイトル */
-.site-title{
-  font-size:1.6rem;
-  font-weight:600;
-  letter-spacing:.05em;
+h1{
   margin:0;
-}
-
-/* サブタイトル */
-.site-sub{
-  color:var(--sub);
-  font-size:.95rem;
-  margin:6px 0 0 56px; /* ロゴに揃える */
-}
-
-/* ナビ */
-nav{
-  margin-top:18px;
-  display:flex;
-  gap:18px;
-  flex-wrap:wrap;
-  font-size:.95rem;
-  color:var(--sub);
-}
-
-nav a:hover{
-  color:var(--text);
-}
-
-/* ===== CONTENT ===== */
-
-section{
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  padding:28px 24px;
-  margin-bottom:20px;
-}
-
-h2{
-  margin:0 0 16px;
-  font-size:1.08rem;
-  font-weight:600;
-  letter-spacing:.05em;
-}
-
-p{
-  margin:0 0 14px;
+  font-size:2.6rem;
+  font-weight:500;
 }
 
 .lead{
-  font-size:1.05rem;
-}
-
-.muted{
+  margin-top:18px;
   color:var(--sub);
 }
 
-.focus-list{
-  display:grid;
-  gap:10px;
-  padding:0;
-  margin:0;
-  list-style:none;
+.signature{
+  margin-top:20px;
+  color:var(--accent);
 }
 
-.focus-list li{
-  padding:12px 0;
+section{
+  padding:32px 0;
   border-bottom:1px solid var(--line);
 }
 
-.focus-list li:last-child{
-  border-bottom:none;
+h2{
+  font-size:0.9rem;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:16px;
 }
 
-/* ===== CONTACT ===== */
+h3{
+  margin:24px 0 8px;
+  font-size:1rem;
+  font-weight:500;
+  color:var(--text);
+}
 
-.contact-box{
+.jp{
+  color:var(--sub);
+  font-size:0.95rem;
+  margin-top:4px;
+}
+
+.signature-block{
+  margin-top:24px;
+  line-height:1.6;
+}
+
+.signature-en{
+  font-size:0.95rem;
+}
+
+.signature-jp{
+  margin-top:6px;
+  color:var(--sub);
+  font-size:0.9rem;
+}
+
+.list{
   display:grid;
-  gap:10px;
+  gap:14px;
 }
 
-/* ===== FOOTER ===== */
+.card{
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:var(--panel);
+}
+
+.item-title{
+  font-weight:500;
+}
+
+.item-sub{
+  color:var(--sub);
+  font-size:0.95rem;
+}
+
+.calendar-shell{
+  margin-top:10px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  overflow:hidden;
+}
+
+.calendar-toolbar{
+  padding:14px;
+  text-align:center;
+  border-bottom:1px solid var(--line);
+}
+
+.calendar-crop{
+  height:760px;
+  overflow:hidden;
+}
+
+.calendar-frame{
+  width:100%;
+  height:808px;
+  border:0;
+  margin-bottom:-48px;
+}
+
+.calendar-note{
+  margin-top:12px;
+  font-size:0.9rem;
+  color:var(--sub);
+}
+
+.profile-group{
+  margin-top:20px;
+}
+
+.profile-list{
+  margin:8px 0 0;
+  padding-left:1.2em;
+  color:var(--text);
+}
+
+.profile-list li{
+  margin:6px 0;
+}
+
+.profile-note{
+  margin-top:14px;
+  color:var(--sub);
+  font-size:0.92rem;
+}
+
+a{
+  color:var(--text);
+  text-decoration:none;
+  border-bottom:1px solid rgba(31,53,80,0.3);
+}
 
 footer{
-  margin-top:36px;
-  padding-top:22px;
-  border-top:1px solid var(--line);
+  padding-top:26px;
+  font-size:0.88rem;
   color:var(--sub);
-  font-size:.9rem;
-}
-
-/* ===== MOBILE ===== */
-
-@media (max-width:640px){
-  .wrap{
-    padding:22px 16px 56px;
-  }
-
-  section{
-    padding:22px 18px;
-  }
-
-  .site-title{
-    font-size:1.4rem;
-  }
-
-  .site-sub{
-    margin-left:0;
-  }
-
-  .brand{
-    align-items:flex-start;
-  }
 }
 </style>
 </head>
 
 <body>
-<div class="wrap">
+<main class="wrap">
 
 <header>
-
-  <!-- ===== ロゴ＋タイトル ===== -->
-  <div class="brand">
-
-    <!-- SVGロゴ（ミニマル医療系） -->
-    <svg class="logo" viewBox="0 0 100 100" fill="none">
-      <circle cx="50" cy="50" r="46" stroke="#7a8f89" stroke-width="2"/>
-      <line x1="50" y1="28" x2="50" y2="72" stroke="#7a8f89" stroke-width="2"/>
-      <line x1="28" y1="50" x2="72" y2="50" stroke="#7a8f89" stroke-width="2"/>
-    </svg>
-
-    <h1 class="site-title">Samklang &amp; Ro Healthcare</h1>
-  </div>
-
-  <p class="site-sub">
-    Dental Anesthesia / Dysphagia Rehabilitation / Orofacial Pain
-  </p>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="publication.html">Publication</a>
-    <a href="request.html">Request</a>
-  </nav>
-
+<p class="logo"><img src="logo.png" alt="Samklang &amp; Ro Healthcare logo"></p>
+<h1>Samklang &amp; Ro Healthcare</h1>
+<p class="lead">
+Clinical practice in dental anesthesia,<br>
+dysphagia rehabilitation, and orofacial pain.
+</p>
+<p class="signature">Quiet expertise for thoughtful clinical care.</p>
 </header>
 
 <section>
-  <h2>Statement</h2>
-  <p class="lead">
-    Providing calm, clinically grounded support in dental anesthesia,
-    dysphagia rehabilitation, and orofacial pain.
-  </p>
-  <p class="muted">
-    This site serves as a concise professional profile and point of contact.
-  </p>
-</section>
+<h2>Statement</h2>
 
-<section>
-  <h2>Clinical Focus</h2>
-  <ul class="focus-list">
-    <li>Dental anesthesia</li>
-    <li>Dysphagia rehabilitation</li>
-    <li>Orofacial pain</li>
-  </ul>
-</section>
+<p>
+We provide thoughtful clinical support to ensure safe, comfortable, and reliable dental care.
+</p>
+<p class="jp">
+安全で快適かつ信頼できる歯科医療を実現するため、丁寧な臨床支援を提供します。
+</p>
 
-<section>
-  <h2>About</h2>
-  <p>
-    Clinical practice, collaboration, and academic activity are approached
-    with an emphasis on steadiness, clarity, and practical usefulness.
-  </p>
-</section>
+<p>
+Our approach integrates dental anesthesia, dysphagia rehabilitation, and orofacial pain management.
+</p>
+<p class="jp">
+歯科麻酔・摂食嚥下リハビリテーション・口腔顔面痛診療を統合したアプローチを行います。
+</p>
 
-<section>
-  <h2>Contact</h2>
-  <div class="contact-box">
-    <div>
-      <a href="mailto:info@samklang-ro.com">info@samklang-ro.com</a>
-    </div>
+<p>
+We support patients with complex needs and medical conditions through careful preparation and calm clinical judgment.
+</p>
+<p class="jp">
+全身状態や背景の複雑な患者にも対応できるよう、入念な準備と落ち着いた臨床判断を重視しています。
+</p>
+
+<div class="signature-block" style="text-align:right;">
+  <div class="signature-en">
+    Motoaki Inagawa, DDS, PhD.<br>
+    Board Certified Specialist Dental Anesthesiology (JDSA)
   </div>
+  <div class="signature-jp">
+    稲川元明<br>
+    歯学博士<br>
+    日本歯科麻酔学会専門医
+  </div>
+</div>
+
+</section>
+
+<section>
+<h2>Schedule</h2>
+<div class="calendar-shell">
+<div class="calendar-toolbar">Schedule</div>
+<div class="calendar-crop">
+<iframe class="calendar-frame"
+src="https://calendar.google.com/calendar/embed?src=95666e31c98ab50df94b065bc9e701ccce022973d3631561ecb4350c4a4fba6e%40group.calendar.google.com&ctz=Asia%2FTokyo&mode=MONTH&showTabs=1&showTitle=0&showCalendars=0">
+</iframe>
+</div>
+</div>
+<p class="calendar-note">
+Default view is monthly. You can switch views within the calendar.
+</p>
+</section>
+
+<section>
+<h2>For Professionals</h2>
+
+<p>
+We offer clinical support for dental clinics and medical institutions requiring advanced patient management.
+</p>
+<p class="jp">
+高度な患者管理を必要とする歯科医院・医療機関に対して臨床支援を行います。
+</p>
+
+<p>
+Our services include dental anesthesia, perioperative management, and consultation in dysphagia and orofacial pain.
+</p>
+<p class="jp">
+歯科麻酔、周術期管理、嚥下および口腔顔面痛に関する専門的コンサルテーションを提供します。
+</p>
+
+<div class="list">
+<div class="card"><div class="item-title">Dental Anesthesia Support</div><div class="item-sub">出張麻酔・静脈内鎮静</div></div>
+<div class="card"><div class="item-title">Perioperative Management</div><div class="item-sub">周術期管理・全身管理</div></div>
+<div class="card"><div class="item-title">Dysphagia &amp; Pain Consultation</div><div class="item-sub">嚥下・口腔顔面痛の専門相談</div></div>
+<div class="card"><div class="item-title">Lectures &amp; Education</div><div class="item-sub">講演・研修</div></div>
+</div>
+
+<p style="margin-top:16px;">
+We accept clinical requests and professional collaborations.
+</p>
+<p class="jp">
+診療支援および専門的な協働のご相談を承っております。
+</p>
+
+</section>
+
+<section>
+<h2>Professional Profile</h2>
+
+<p>
+Professional qualifications, academic presentations, and publications are organized here as part of an integrated clinical and academic profile.
+</p>
+<p class="jp">
+専門資格、学会発表、論文を、臨床と学術の両面から整理して掲載しています。
+</p>
+
+<div class="profile-group">
+  <h3>Certifications</h3>
+  <p class="jp">専門資格</p>
+  <ul class="profile-list">
+    <li>Board Certified Specialist Dental Anesthesiology (JDSA)</li>
+    <li>DDS, PhD</li>
+  </ul>
+</div>
+
+<div class="profile-group">
+  <h3>Academic Presentations</h3>
+  <p class="jp">学会発表</p>
+  <ul class="profile-list">
+    <li><a href="publication.html">View presentations and academic record</a></li>
+  </ul>
+</div>
+
+<div class="profile-group">
+  <h3>Publications</h3>
+  <p class="jp">論文</p>
+  <ul class="profile-list">
+    <li><a href="publication.html">View publication list</a></li>
+  </ul>
+</div>
+
+<p class="profile-note">
+A dedicated page is available for detailed records.
+</p>
+</section>
+
+<section>
+<h2>Contact</h2>
+
+<p><a href="mailto:info@samklang-ro.com">info@samklang-ro.com</a></p>
+
+<p style="margin-top:16px;">
+<a href="request.html">Contact form</a>
+</p>
+
 </section>
 
 <footer>
-  © Samklang &amp; Ro Healthcare
+© Samklang &amp; Ro Healthcare
 </footer>
 
-</div>
+</main>
 </body>
 </html>
